@@ -1,0 +1,33 @@
+{
+  "name": "koishi-plugin-ipinfo",
+  "description": "IP Lookup",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "ipinfo",
+    "ip"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.16.8"
+  },
+  "koishi": {
+    "description": {
+      "zh": "IP 地址查询",
+      "en": "IP Lookup"
+    },
+    "locales": [
+      "zh",
+      "en"
+    ]
+  }
+}
