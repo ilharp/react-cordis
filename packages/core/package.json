@@ -1,0 +1,14 @@
+{
+  "name": "react-cordis-notifier",
+  "description": "Real React for Cordis Notifier, like Server Components.",
+  "version": "0.0.1",
+  "dependencies": {
+    "react-reconciler": "*"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react-reconciler": "^0.28.8"
+  }
+}
