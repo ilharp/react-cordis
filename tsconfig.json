@@ -1,0 +1,44 @@
+{
+  "extends": "./tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "react-cordis-notifier": [
+        "packages/core/src"
+      ],
+      "koishi-plugin-*": [
+        "external/*/src",
+        "external/*/packages/core/src",
+        "packages/*/src",
+        "plugins/*/src",
+      ],
+      "@koishijs/client/lib": [
+        "external/webui/packages/client/src"
+      ],
+      "@koishijs/plugin-*": [
+        "external/koishi/plugins/common/*/src",
+        "external/koishi/plugins/*/src",
+        "external/webui/plugins/*/src",
+      ],
+      "@koishijs/*": [
+        "external/koishi/packages/*/src",
+        "external/webui/packages/*/src",
+        "external/*/packages/core/src",
+      ],
+      "cordis-*": [
+        "external/satori/packages/*/src"
+      ],
+      "koishi": [
+        "external/koishi/packages/koishi/src"
+      ],
+      "*": [
+        "packages/*/src"
+      ],
+    },
+  },
+  "include": [
+    "external",
+    "packages",
+    "scripts"
+  ]
+}
