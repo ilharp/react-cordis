@@ -32,7 +32,6 @@ const buildHostConfig = (
   number,
   number
 > => ({
-  // Generate FULL Satori content in every update.
   supportsMutation: true,
   supportsPersistence: false,
 
@@ -129,13 +128,9 @@ const buildHostConfig = (
     _prevProps,
     _nextProps,
     _internalHandle,
-  ) {
-    // TODO
-  },
+  ) {},
 
-  commitTextUpdate(_textInstance, _oldText, _newText) {
-    // TODO
-  },
+  commitTextUpdate(_textInstance, _oldText, _newText) {},
 
   finalizeInitialChildren(
     _instance,
@@ -211,36 +206,25 @@ export const render = (
   ctx: Context,
   type: Notifier.Type,
   element: ReactNode,
-  callback: () => void,
 ) => {
-  let notifier: Notifier | undefined = undefined
-
-  const update = () => {}
-
-  const reactCordisNotifier = buildReactCordisNotifier(update)
-
-  const rootContainer = h('message')
-
-  notifier = ctx.notifier.create({
+  const notifier = ctx.notifier.create({
     type,
     content: '',
   })
+  const rootContainer = h('message')
 
-  reactCordisNotifier.createContainer(
-    rootContainer,
-    false,
-    null,
-    true,
-    null,
-    undefined,
-    undefined,
-    null,
-  )
+  const update = () =>
+    notifier.update({
+      type,
+      content: rootContainer,
+    })
 
-  return reactCordisNotifier.updateContainer(
-    element,
-    rootContainer,
-    null,
-    callback,
-  )
+  const reactCordisNotifier = buildReactCordisNotifier(update)
+
+  // @ts-expect-error
+  reactCordisNotifier.createContainer(rootContainer)
+
+  reactCordisNotifier.updateContainer(element, rootContainer, null)
+
+  return () => notifier.dispose()
 }
