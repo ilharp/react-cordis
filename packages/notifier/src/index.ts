@@ -221,10 +221,12 @@ export const render = (
 
   const reactCordisNotifier = buildReactCordisNotifier(update)
 
-  // @ts-expect-error
-  reactCordisNotifier.createContainer(rootContainer)
-
-  reactCordisNotifier.updateContainer(element, rootContainer, null)
+  reactCordisNotifier.updateContainer(
+    element,
+    // @ts-expect-error
+    reactCordisNotifier.createContainer(rootContainer),
+    null,
+  )
 
   return () => notifier.dispose()
 }
