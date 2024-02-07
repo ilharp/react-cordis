@@ -211,7 +211,7 @@ export const render = (
     type,
     content: '',
   })
-  const rootContainer = h('message')
+  const rootContainer = h('p')
 
   const update = () =>
     notifier.update({
