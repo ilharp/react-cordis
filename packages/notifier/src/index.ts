@@ -19,7 +19,7 @@ const buildHostConfig = (
   update: () => void,
 ): HostConfig<
   never,
-  never,
+  object,
   h,
   h,
   h,
@@ -36,7 +36,10 @@ const buildHostConfig = (
   supportsPersistence: false,
 
   createInstance(type, props, _rootContainer, _hostContext, _internalHandle) {
-    return h(type, props)
+    return h(type, {
+      ...props,
+      children: undefined,
+    })
   },
 
   createTextInstance(text, _rootContainer, _hostContext, _internalHandle) {
