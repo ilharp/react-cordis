@@ -208,18 +208,18 @@ export const buildReactCordisNotifier = (update: () => void) =>
 
 export const render = (
   ctx: Context,
-  type: Notifier.Type,
   element: ReactNode,
+  type?: Notifier.Type,
 ) => {
   const notifier = ctx.notifier.create({
-    type,
+    type: type || 'primary',
     content: '',
   })
   const rootContainer = h('p')
 
   const update = () =>
     notifier.update({
-      type,
+      type: type || 'primary',
       content: cloneDeepWith(rootContainer, (x) =>
         typeof x === 'function' ? x : undefined,
       ),
