@@ -1,14 +1,30 @@
 {
   "name": "react-cordis-notifier",
   "description": "Real React for Cordis Notifier, like Server Components.",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cordis",
+    "react",
+    "render",
+    "renderer",
+    "reconciler",
+    "notifier"
+  ],
   "dependencies": {
+    "lodash.clonedeepwith": "^4.5.0",
     "react-reconciler": "*"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
   },
   "devDependencies": {
+    "@types/lodash.clonedeepwith": "^4.5.9",
     "@types/react-reconciler": "^0.28.8"
   }
 }

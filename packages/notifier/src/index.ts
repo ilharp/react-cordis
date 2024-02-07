@@ -126,15 +126,22 @@ const buildHostConfig = (
   },
 
   commitUpdate(
-    _instance,
+    instance,
     _updatePayload,
     _type,
     _prevProps,
-    _nextProps,
+    nextProps,
     _internalHandle,
-  ) {},
+  ) {
+    instance.attrs = {
+      ...nextProps,
+      children: undefined,
+    }
+  },
 
-  commitTextUpdate(_textInstance, _oldText, _newText) {},
+  commitTextUpdate(textInstance, _oldText, newText) {
+    textInstance.attrs['content'] = newText
+  },
 
   finalizeInitialChildren(
     _instance,
@@ -201,6 +208,7 @@ const buildHostConfig = (
     throw new Error('Not Implemented')
   },
   supportsHydration: false,
+  warnsIfNotActing: false,
 })
 
 export const buildReactCordisNotifier = (update: () => void) =>
