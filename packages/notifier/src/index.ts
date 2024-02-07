@@ -1,6 +1,7 @@
 import type { Notifier } from '@koishijs/plugin-notifier'
 import h from '@satorijs/element'
 import type { Context } from 'koishi'
+import cloneDeepWith from 'lodash.clonedeepwith'
 import type { ReactNode } from 'react'
 import type { HostConfig } from 'react-reconciler'
 import Reconciler from 'react-reconciler'
@@ -219,7 +220,9 @@ export const render = (
   const update = () =>
     notifier.update({
       type,
-      content: rootContainer,
+      content: cloneDeepWith(rootContainer, (x) =>
+        typeof x === 'function' ? x : undefined,
+      ),
     })
 
   const reactCordisNotifier = buildReactCordisNotifier(update)
