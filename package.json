@@ -68,13 +68,11 @@
   },
   "dependencies": {
     "@koishijs/plugin-actions": "^0.0.2",
-    "@koishijs/plugin-admin": "^2.0.0-beta.4",
     "@koishijs/plugin-config": "^2.8.4",
     "@koishijs/plugin-console": "^5.27.9",
     "@koishijs/plugin-database-sqlite": "^3.9.0",
     "@koishijs/plugin-insight": "^3.5.1",
     "@koishijs/plugin-logger": "^2.6.7",
-    "@koishijs/plugin-market": "^2.11.1",
     "@koishijs/plugin-notifier": "^1.2.0",
     "@koishijs/plugin-server": "^3.1.7",
     "koishi": "^4.16.8",
