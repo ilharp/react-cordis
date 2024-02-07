@@ -1,0 +1,36 @@
+{
+  "name": "koishi-plugin-rc-counter",
+  "description": "Counter based on react-cordis.",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "dependencies": {
+    "react": ">=16.8.0",
+    "react-cordis-notifier": "^0.1.0"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "koishi": "^4.16.8"
+  },
+  "koishi": {
+    "description": {
+      "zh": "基于 react-cordis 的计数器。",
+      "en": "Counter based on react-cordis."
+    },
+    "locales": [
+      "zh",
+      "en"
+    ]
+  }
+}
