@@ -13,6 +13,8 @@ jobs:
       matrix:
         package:
           - notifier
+          - rc-counter
+          - rc-useless
 
     name: Build ${{ matrix.package }}
 
