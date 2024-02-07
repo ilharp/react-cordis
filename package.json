@@ -1,6 +1,6 @@
 {
-  "name": "react-cordis-notifier-workspace",
-  "description": "Real React for Cordis Notifier, like Server Components.",
+  "name": "react-cordis-workspace",
+  "description": "Real React for Cordis, like Server Components.",
   "version": "0.0.0",
   "packageManager": "yarn@1.22.19",
   "private": true,

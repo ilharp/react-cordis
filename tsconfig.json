@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-cordis-notifier": [
-        "packages/core/src"
+      "react-cordis-*": [
+        "packages/*/src"
       ],
       "koishi-plugin-*": [
         "external/*/src",
